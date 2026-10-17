@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Mousa Taha - Junior .NET / ASP.NET Core backend developer in Amman, Jordan. Live projects, skills, experience and contact.">
+<meta property="og:title" content="Mousa Taha · .NET Developer">
+<meta property="og:description" content="Junior .NET / ASP.NET Core backend developer in Amman, Jordan. Open to on-site, hybrid and remote roles.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mousa101.github.io/">
+<meta property="og:image" content="https://mousa101.github.io/bluebridge.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23512BD4'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3EMT%3C/text%3E%3C/svg%3E">
+<style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-behavior:smooth;scroll-padding-top:70px}body{margin:0}img{max-width:100%}[hidden]{display:none!important}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style><title>Mousa Taha · .NET Developer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an API response as the hero, then projects as "endpoints" with their status, then a timeline and contact. */
+:root{
+  --bg:#F6F5FA; --surface:#FFFFFF; --ink:#17142A; --muted:#5D5876; --line:#DEDAEC;
+  --accent:#512BD4; --accent-soft:#ECE7FC; --ok:#13804B; --code-bg:#1B1830; --code-ink:#E6E2F7;
+  --k:#B9A6FF; --s:#F3C26B; --n:#7FD6B0;
+  --display:"Schibsted Grotesk",system-ui,sans-serif;
+  --body:"Source Sans 3",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#100E1C; --surface:#181528; --ink:#ECE9F7; --muted:#A39DBD; --line:#2C2843;
+  --accent:#A08BFF; --accent-soft:#251F45; --ok:#4FD38A; --code-bg:#0B0915; --code-ink:#E6E2F7; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#100E1C; --surface:#181528; --ink:#ECE9F7; --muted:#A39DBD; --line:#2C2843;
+  --accent:#A08BFF; --accent-soft:#251F45; --ok:#4FD38A; --code-bg:#0B0915; --code-ink:#E6E2F7; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 72px}
+.wrap{max-width:1000px;margin-inline:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+
+/* top */
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-block:22px}
+.brand{font:700 15px var(--display);letter-spacing:.01em}
+.nav{display:flex;gap:18px;flex-wrap:wrap;font:500 13px var(--mono)}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--accent)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:center;padding-block:clamp(20px,5vw,56px)}
+.avail{display:inline-flex;align-items:center;gap:8px;font:500 13px var(--mono);color:var(--ok);background:var(--surface);border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+h1{font-weight:800;font-size:clamp(40px,6.4vw,68px);line-height:1;letter-spacing:-.03em;margin-top:20px}
+.role{font:700 clamp(19px,2.4vw,24px)/1.3 var(--display);color:var(--accent);margin:14px 0 0}
+.lede{color:var(--muted);max-width:52ch;margin:16px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:6px;font:600 15px var(--body);text-decoration:none;border:1px solid var(--line);background:var(--surface)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#100E1C}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.primary{color:#100E1C}}
+
+/* the response panel */
+.resp{background:var(--code-bg);color:var(--code-ink);border-radius:10px;font:13.5px/1.7 var(--mono);overflow:hidden;min-width:0}
+.resp .req{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.08);font-size:12.5px}
+.resp .req b{color:var(--n);font-weight:500}
+.resp .req span{opacity:.6}
+.resp pre{margin:0;padding:16px;overflow-x:auto;white-space:pre}
+.k{color:var(--k)} .s{color:var(--s)} .n{color:var(--n)}
+
+/* sections */
+section{margin-top:72px}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+h2{font-weight:800;font-size:clamp(28px,3.8vw,38px);letter-spacing:-.02em;line-height:1.1;margin-bottom:26px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.skills div{background:var(--surface);padding:18px 20px}
+.skills h3{font:600 13px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font:500 13px var(--mono);padding:3px 9px;border-radius:4px;background:var(--accent-soft);color:var(--ink)}
+
+/* projects */
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.proj + .proj{margin-top:20px}
+.proj .info{padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:12px;min-width:0}
+.route{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font:500 12.5px var(--mono);color:var(--muted)}
+.code{padding:2px 7px;border-radius:4px;border:1px solid currentColor}
+.code.ok{color:var(--ok)}
+.code.int{color:var(--accent)}
+.proj h3{font-weight:800;font-size:clamp(22px,2.6vw,28px);letter-spacing:-.015em;line-height:1.15}
+.proj p{margin:0;color:var(--muted)}
+.proj ul{margin:0;padding-left:18px;color:var(--ink)}
+.proj li{margin-bottom:4px}
+.stack{display:flex;flex-wrap:wrap;gap:6px}
+.stack span{font:400 12px var(--mono);padding:3px 8px;border:1px solid var(--line);border-radius:4px}
+.visit{font:500 14px var(--mono);color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor;align-self:flex-start}
+.proj figure{margin:0;background:var(--accent-soft);border-left:1px solid var(--line);display:flex;align-items:flex-start;min-width:0}
+.proj figure img{display:block;width:100%;height:auto}
+.proj.solo{grid-template-columns:1fr}
+.facts{display:flex;flex-wrap:wrap;gap:18px;margin-top:4px}
+.facts div{font:400 13px var(--body);color:var(--muted)}
+.facts b{display:block;font:800 24px/1.1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+
+.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:20px}
+.more article{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.more h3{font:700 18px/1.25 var(--display)}
+.more p{margin:0;color:var(--muted);font-size:15.5px}
+
+/* experience */
+.tl{border-left:2px solid var(--line);margin-left:6px;display:grid;gap:30px}
+.tl article{position:relative;padding-left:24px}
+.tl article::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl .when{font:500 13px var(--mono);color:var(--muted)}
+.tl h3{font:700 19px/1.3 var(--display);margin-top:2px}
+.tl .org{color:var(--accent);font-weight:600}
+.tl p{margin:6px 0 0;color:var(--muted);max-width:68ch}
+
+/* contact */
+.contact{background:var(--code-bg);color:var(--code-ink);border-radius:12px;padding:clamp(24px,4vw,44px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center}
+.contact h2{color:#fff;margin-bottom:10px}
+.contact p{margin:0;opacity:.8}
+.rows{display:grid;gap:10px;font:14px var(--mono)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 14px;border:1px solid rgba(255,255,255,.12);border-radius:6px}
+.row span{opacity:.6}
+.row a,.row b{color:#fff;font-weight:500;text-decoration:none;user-select:all;word-break:break-all}
+.copy{all:unset;cursor:pointer;font:500 12px var(--mono);color:var(--k);padding:2px 6px;border-radius:4px}
+.copy:focus-visible{outline:2px solid var(--k)}
+footer{margin-top:26px;font:12.5px var(--mono);color:var(--muted)}
+
+/* hello line */
+.hi{font:600 18px var(--display);color:var(--muted);margin:18px 0 -10px}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:start}
+.story p:not(.eyebrow){margin:0 0 16px;max-width:62ch}
+.story p:not(.eyebrow):first-of-type::first-letter{font:800 3.1em/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--accent)}
+.card-me{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:grid;gap:18px;position:relative;overflow:hidden}
+.card-me::before{content:"";position:absolute;inset:0 0 auto;height:72px;background:linear-gradient(120deg,var(--accent),var(--n))}
+.avatar{position:relative;width:84px;height:84px;border-radius:50%;display:grid;place-items:center;font:800 30px var(--display);color:var(--accent);background:var(--surface);border:4px solid var(--surface);box-shadow:0 0 0 2px var(--accent);margin-top:18px}
+.card-me dl{margin:0;display:grid;gap:12px}
+.card-me dl div{display:grid;grid-template-columns:90px minmax(0,1fr);gap:10px;font-size:15px;padding-bottom:12px;border-bottom:1px dashed var(--line)}
+.card-me dl div:last-child{border-bottom:0;padding-bottom:0}
+.card-me dt{font:500 12px/1.9 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.card-me dd{margin:0}
+
+/* values */
+.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:40px}
+.values article{background:var(--accent-soft);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:8px}
+.vnum{font:500 12px var(--mono);color:var(--accent)}
+.values h3{font:800 22px/1.2 var(--display)}
+.values p{margin:0;color:var(--muted);font-size:15.5px}
+
+/* wide project: text left, wide screenshot below on small screens */
+.proj.wide{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+.proj figure{align-items:center;padding:14px}
+.proj figure img{border-radius:6px;box-shadow:0 12px 30px -18px rgba(0,0,0,.45)}
+
+@media (max-width:760px){.about,.proj.wide{grid-template-columns:1fr}}
+
+/* ---------- motion ---------- */
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes lineIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
+@keyframes blink{50%{opacity:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes ping{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ok) 60%,transparent)}80%,100%{box-shadow:0 0 0 9px transparent}}
+@keyframes sheen{from{background-position:-150% 0}to{background-position:250% 0}}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 transparent}50%{box-shadow:0 0 0 1px color-mix(in srgb,var(--accent) 45%,transparent),0 18px 50px -20px var(--accent)}}
+
+.hero > div:first-child > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.hero > div:first-child > :nth-child(2){animation-delay:.08s}
+.hero > div:first-child > :nth-child(3){animation-delay:.16s}
+.hero > div:first-child > :nth-child(4){animation-delay:.24s}
+.hero > div:first-child > :nth-child(5){animation-delay:.32s}
+.resp{animation:rise .7s .2s cubic-bezier(.2,.7,.2,1) both, glow 4s 2.6s ease-in-out infinite;position:relative}
+.dot,.code.ok::before{animation:ping 2s infinite}
+.code.ok{display:inline-flex;align-items:center;gap:6px}
+.code.ok::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h1{background:linear-gradient(100deg,var(--ink) 40%,var(--accent) 50%,var(--ink) 60%) 0 0/250% 100% no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;animation:rise .7s cubic-bezier(.2,.7,.2,1) .08s both,sheen 2.4s 1s ease-out both}
+
+/* request → response sequence (JS adds .run) */
+.caret{display:inline-block;width:7px;height:1em;background:var(--n);vertical-align:-2px;margin-left:2px;animation:blink 1s steps(1) infinite}
+.status .spin{display:none;width:10px;height:10px;border:2px solid rgba(255,255,255,.25);border-top-color:var(--n);border-radius:50%;animation:spin .7s linear infinite;margin-right:6px;vertical-align:-1px}
+.resp.loading .spin{display:inline-block}
+.resp.loading .st-txt,.resp.typing .st-txt{opacity:0}
+.st-txt{transition:opacity .3s}
+.ln{display:block}
+.resp.typing .ln,.resp.loading .ln{opacity:0}
+.resp.run .ln{animation:lineIn .35s calc(var(--i) * 70ms) ease-out both}
+.replay{all:unset;cursor:pointer;display:block;margin:0 16px 14px auto;width:max-content;font:500 12px var(--mono);color:var(--k);opacity:.75;padding:3px 8px;border-radius:4px;border:1px solid rgba(255,255,255,.12)}
+.replay:hover{opacity:1;background:rgba(255,255,255,.06)}
+.replay:focus-visible{outline:2px solid var(--k)}
+
+/* hover life */
+.btn{transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px -10px var(--accent)}
+.proj,.more article{transition:transform .3s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .3s}
+.proj,.more article,.values article,.card-me{transition:translate .3s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .3s}
+.proj:hover,.more article:hover,.values article:hover,.card-me:hover{translate:0 -4px;border-color:var(--accent);box-shadow:0 22px 40px -28px var(--accent)}
+.proj figure{overflow:hidden}
+.proj figure img{transition:scale .6s cubic-bezier(.2,.7,.2,1)}
+.proj:hover figure img{scale:1.04}
+.chips span{transition:transform .2s,background .2s,color .2s}
+.chips span:hover{transform:translateY(-2px);background:var(--accent);color:var(--bg)}
+.tl article::before{transition:background .3s,transform .3s}
+.tl article:hover::before{background:var(--accent);transform:scale(1.25)}
+
+/* scroll reveal: CSS scroll-driven where supported; elsewhere everything simply shows */
+/* sticky bar + reading progress */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;margin-inline:-12px;padding-inline:12px;transition:background .3s,box-shadow .3s}
+.top.stuck{background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.progress{position:absolute;left:0;bottom:0;height:2px;width:100%;background:linear-gradient(90deg,var(--accent),var(--n));transform-origin:left;transform:scaleX(var(--sp,0))}
+.nav a{position:relative;transition:color .2s}
+.nav a.on{color:var(--accent)}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--accent);transform:scaleX(0);transition:transform .3s}
+.nav a.on::after{transform:scaleX(1)}
+
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes fromL{from{opacity:0;transform:translateX(-70px) rotate(-1.5deg)}to{opacity:1;transform:none}}
+@keyframes fromR{from{opacity:0;transform:translateX(70px) rotate(1.5deg)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.88) translateY(30px)}to{opacity:1;transform:none}}
+@keyframes wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes heroOut{to{transform:perspective(900px) rotateX(18deg) scale(.9) translateY(-30px);opacity:.25}}
+@keyframes textOut{to{transform:translateY(-60px);opacity:.2}}
+@keyframes drift{from{transform:translateY(-6%) scale(1.12)}to{transform:translateY(6%) scale(1.12)}}
+@keyframes zoomIn{from{transform:scale(.86);border-radius:40px;opacity:.3}to{transform:none;border-radius:12px;opacity:1}}
+
+@supports (animation-timeline: view()){
+  /* hero folds away as you scroll past it */
+  .hero{view-timeline-name:--hero}
+  .hero .resp{animation:heroOut linear both;animation-timeline:--hero;animation-range:exit 10% exit 90%}
+  .hero > div:first-child{animation:textOut linear both;animation-timeline:--hero;animation-range:exit 0% exit 100%}
+
+  /* headings wipe in from the left */
+  section h2,section .eyebrow{animation:wipe linear both;animation-timeline:view();animation-range:entry 10% cover 30%}
+
+  /* skill tiles pop in, staggered by range */
+  .skills > div{animation:pop linear both;animation-timeline:view()}
+  .skills > div:nth-child(1){animation-range:entry 0% cover 25%}
+  .skills > div:nth-child(2){animation-range:entry 10% cover 30%}
+  .skills > div:nth-child(3){animation-range:entry 20% cover 35%}
+  .skills > div:nth-child(4){animation-range:entry 30% cover 40%}
+
+  /* project cards slide in from alternating sides; screenshots drift inside */
+  .proj:nth-of-type(odd){animation:fromL linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+  .proj:nth-of-type(even){animation:fromR linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+  .proj figure img{animation:drift linear both;animation-timeline:view()}
+  .story{animation:fromL linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+  .card-me{animation:fromR linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+  .values article{animation:pop linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+  .values article:nth-child(2){animation-range:entry 10% cover 35%}
+  .values article:nth-child(3){animation-range:entry 20% cover 40%}
+  .more article{animation:pop linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+  .more article:nth-child(even){animation-range:entry 15% cover 40%}
+
+  /* timeline draws itself, entries slide in */
+  .tl{position:relative}
+  .tl::before{content:"";position:absolute;left:-2px;top:0;width:2px;height:100%;background:var(--accent);transform-origin:top;animation:grow linear both;animation-timeline:view();animation-range:entry 20% cover 70%}
+  .tl article{animation:fromR linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+
+  /* contact panel zooms open */
+  .contact{animation:zoomIn linear both;animation-timeline:view();animation-range:entry 0% cover 40%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  h1{color:var(--ink);background:none}
+  .resp .ln,.st-txt{opacity:1!important}
+}
+
+@media (max-width:760px){
+  .hero,.contact{grid-template-columns:1fr}
+  .proj{grid-template-columns:1fr}
+  .proj figure{border-left:0;border-top:1px solid var(--line)}
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <span class="brand">Mousa Taha</span>
+    <nav class="nav"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+    <span class="progress" aria-hidden="true"></span>
+  </div>
+
+  <header class="hero">
+    <div>
+      <span class="avail"><span class="dot"></span>Open to work · Amman or remote</span>
+      <p class="hi">Hi, I'm Mousa.</p>
+      <h1>Mousa Taha</h1>
+      <p class="role">Junior .NET / ASP.NET Core Backend Developer</p>
+      <p class="lede">I like building software that people around me actually use: an office that stopped tracking invoices in Excel, a Quran centre that now sees which students need help, a consultancy whose staff update their own website. I do it with C#, ASP.NET Core, EF Core and SQL Server, and I take it all the way to a live server.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Contact me</a>
+        <a class="btn" href="https://www.linkedin.com/in/mousa-raed-17747b349/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="https://github.com/Mousa101" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+    <div class="resp" aria-label="Profile summary as an API response">
+      <div class="req"><b><span class="typed" id="typed">GET /api/developers/mousa-taha</span><span class="caret"></span></b><span class="status" id="status"><span class="spin"></span><span class="st-txt">200 OK · 38 ms</span></span></div>
+<pre id="json"><span class="ln" style="--i:0">{</span><span class="ln" style="--i:1">  <span class="k">"role"</span>: <span class="s">"Backend Developer (.NET)"</span>,</span><span class="ln" style="--i:2">  <span class="k">"location"</span>: <span class="s">"Amman, Jordan"</span>,</span><span class="ln" style="--i:3">  <span class="k">"stack"</span>: [<span class="s">"C#"</span>, <span class="s">"ASP.NET Core"</span>,</span><span class="ln" style="--i:4">            <span class="s">"EF Core"</span>, <span class="s">"SQL Server"</span>],</span><span class="ln" style="--i:5">  <span class="k">"liveProjects"</span>: <span class="n" data-count="3">3</span>,</span><span class="ln" style="--i:6">  <span class="k">"degree"</span>: <span class="s">"BSc Computer Science, BAU"</span>,</span><span class="ln" style="--i:7">  <span class="k">"languages"</span>: [<span class="s">"Arabic"</span>, <span class="s">"English"</span>],</span><span class="ln" style="--i:8">  <span class="k">"openTo"</span>: [<span class="s">"on-site"</span>, <span class="s">"hybrid"</span>, <span class="s">"remote"</span>]</span><span class="ln" style="--i:9">}</span></pre>
+      <button class="replay" id="replay" type="button">↻ Send request again</button>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <div class="story">
+      <p class="eyebrow">About me</p>
+      <h2>From game developer to teacher to backend developer</h2>
+      <p>I started out writing C# in Unity at Makan Entertainment, building a 3D mall simulator and working on a multiplayer game. That's where I fell in love with making things work behind the scenes.</p>
+      <p>Then I became a teacher. Every day I explain programming to teenagers, and I coach robotics teams that have to deliver under real deadlines. Teaching made me patient, clear, and very good at debugging other people's code.</p>
+      <p>Along the way I trained as a .NET backend developer at Kensoftware and Coderz, and I started building real systems for people I know. Now I want to do it full time, inside a team where I can learn from experienced developers and grow.</p>
+    </div>
+    <aside class="card-me">
+      <div class="avatar" aria-hidden="true">MT</div>
+      <dl>
+        <div><dt>Based in</dt><dd>Amman, Jordan</dd></div>
+        <div><dt>Studied</dt><dd>BSc Computer Science, Al-Balqa Applied University</dd></div>
+        <div><dt>Speaks</dt><dd>Arabic (native), English (professional)</dd></div>
+        <div><dt>Mornings</dt><dd>Teaching programming &amp; robotics</dd></div>
+        <div><dt>Evenings</dt><dd>Building and deploying client projects</dd></div>
+        <div><dt>Founded</dt><dd>AlphaSpark, a student tech academy</dd></div>
+      </dl>
+    </aside>
+  </section>
+
+  <section class="values">
+    <article><span class="vnum">01</span><h3>I ship</h3><p>Three of my projects are live on servers I set up, and one runs every day at my school. I handle Docker, HTTPS, domains and backups myself.</p></article>
+    <article><span class="vnum">02</span><h3>I explain</h3><p>Years of teaching mean I write clear docs, ask good questions and can walk anyone through my code.</p></article>
+    <article><span class="vnum">03</span><h3>I listen first</h3><p>Before any code, I write down what the client needs and what's out of scope, so nobody gets surprised later.</p></article>
+  </section>
+
+  <section id="skills">
+    <p class="eyebrow">Skills</p>
+    <h2>What I work with</h2>
+    <div class="skills">
+      <div><h3>Core .NET</h3><div class="chips"><span>C#</span><span>ASP.NET Core MVC</span><span>Web API</span><span>EF Core</span><span>LINQ</span><span>Razor</span><span>Dependency Injection</span></div></div>
+      <div><h3>Architecture</h3><div class="chips"><span>REST API design</span><span>Clean Architecture</span><span>Repository pattern</span><span>DTOs / AutoMapper</span><span>JWT &amp; Identity</span><span>Localization</span></div></div>
+      <div><h3>Data</h3><div class="chips"><span>SQL Server</span><span>PostgreSQL</span><span>T-SQL</span><span>Normalization</span><span>EF Migrations</span></div></div>
+      <div><h3>Frontend &amp; tools</h3><div class="chips"><span>React</span><span>JavaScript</span><span>Git</span><span>Docker</span><span>Linux VPS</span><span>Swagger</span><span>Postman</span></div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <p class="eyebrow">Projects</p>
+    <h2>Things I've built and shipped</h2>
+
+    <article class="proj">
+      <div class="info">
+        <div class="route"><span class="code ok">200 LIVE</span>Client project · Immigration consultancy</div>
+        <h3>Blue Bridge</h3>
+        <p>An Arabic right-to-left website with a full admin dashboard. Staff manage countries, visa programmes, leads and users without touching code.</p>
+        <ul>
+          <li>Clean Architecture with EF Core and SQL Server</li>
+          <li>3 staff roles with an audit log</li>
+          <li>Runs in Docker on a Linux VPS, with HTTPS and automated backups</li>
+        </ul>
+        <div class="stack"><span>ASP.NET Core MVC</span><span>EF Core</span><span>SQL Server</span><span>Docker</span><span>Caddy</span></div>
+        <a class="visit" href="https://blue-bridge.org" target="_blank" rel="noopener">blue-bridge.org ↗</a>
+      </div>
+      <figure><img src="bluebridge.jpg" alt="Blue Bridge homepage in Arabic" loading="lazy"></figure>
+    </article>
+
+    <article class="proj wide">
+      <div class="info">
+        <div class="route"><span class="code int">API</span>Invoicing &amp; stock · Arabic dashboard</div>
+        <h3>TAWJIHI-PRO / AlphaFinancial</h3>
+        <p>Runs the business of distributing Tawjihi study booklets. The office issues invoices to bookshops, tracks each bookshop's account, pays teachers and print shops, and sees warehouse stock and the budget in one place.</p>
+        <ul>
+          <li>Stock updates itself when an invoice is issued, cancelled or returned</li>
+          <li>Layered ASP.NET Core Web API with JWT and role-based access</li>
+          <li>EF Core models and migrations on SQL Server, documented in Swagger</li>
+        </ul>
+        <div class="stack"><span>ASP.NET Core Web API</span><span>EF Core</span><span>SQL Server</span><span>JWT</span><span>React</span></div>
+      </div>
+      <figure><img src="tawjihi.png" alt="TAWJIHI-PRO warehouse screen in Arabic, showing stock value, units and a materials table" loading="lazy"></figure>
+    </article>
+
+    <article class="proj">
+      <div class="info">
+        <div class="route"><span class="code ok">200 LIVE</span>Quran centre · daily use</div>
+        <h3>Al-Farouq points system</h3>
+        <p>Supervisors record attendance and memorisation, award points and rank students and groups. The centre gets weekly statistics, a list of students who are falling behind, and Excel export.</p>
+        <div class="facts"><div><b>27</b>students tracked weekly</div><div><b>2,393</b>points awarded</div><div><b>3</b>supervisor accounts</div></div>
+      </div>
+      <figure><img src="points.jpg" alt="Al-Farouq centre admin dashboard" loading="lazy"></figure>
+    </article>
+
+    <article class="proj">
+      <div class="info">
+        <div class="route"><span class="code ok">200 LIVE</span>Online exams for a private teacher</div>
+        <h3>Al-Moatamad exam platform</h3>
+        <p>A secure online exam system with a separate backend and frontend, running in Docker on the same server as Blue Bridge with each site isolated.</p>
+        <div class="stack"><span>FastAPI</span><span>React</span><span>Docker</span></div>
+        <a class="visit" href="https://al-moatamad.online" target="_blank" rel="noopener">al-moatamad.online ↗</a>
+      </div>
+      <figure><img src="exam.jpg" alt="Teacher dashboard of the exam platform" loading="lazy"></figure>
+    </article>
+
+    <div class="more">
+      <article>
+        <div class="route"><span class="code int">MVC</span></div>
+        <h3>Quran Center Management System</h3>
+        <p>ASP.NET Core 8 MVC app for students, teachers, circles, attendance and progress. Role-based access and a normalized SQL Server database.</p>
+      </article>
+      <article>
+        <div class="route"><span class="code int">MVC</span></div>
+        <h3>Warraq book library</h3>
+        <p>ASP.NET Core MVC library site built with Clean Architecture: three user roles plus guest browsing.</p>
+      </article>
+      <article>
+        <div class="route"><span class="code ok">IN USE</span></div>
+        <h3>SmartBoard Control</h3>
+        <p>One dashboard that monitors and controls about 60 classroom smart boards from 3 brands, with nothing installed on the boards. Built in one week.</p>
+      </article>
+      <article>
+        <div class="route"><span class="code int">API</span></div>
+        <h3>Tbadol Station</h3>
+        <p>A barter marketplace with authentication, item listings and real-time messaging, backed by a REST API and PostgreSQL.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="eyebrow">Experience</p>
+    <h2>Where I've worked</h2>
+    <div class="tl">
+      <article>
+        <span class="when">Current</span>
+        <h3>Freelance Web Developer · <span class="org">Khamsat, Mostaql &amp; direct clients</span></h3>
+        <p>Full-stack web applications with ASP.NET Core backends and REST APIs. I handle requirements, database design, deployment and support after delivery.</p>
+      </article>
+      <article>
+        <span class="when">Current</span>
+        <h3>Computer Science &amp; Robotics Teacher · <span class="org">Alpha International Schools</span></h3>
+        <p>Teach programming, OOP and robotics. Founded AlphaSpark, a student tech academy, and coach competitive robotics teams to deadlines.</p>
+      </article>
+      <article>
+        <span class="when">Apr 2025 – Oct 2025</span>
+        <h3>Backend Developer Trainee (.NET) · <span class="org">Kensoftware</span></h3>
+        <p>Worked on Mwafaq, a medical laboratories Web API, and Master Engineer, a reservation system. Built localization, structured error handling and domain use cases, plus an email service using OAuth 2.0 with Outlook and Google Workspace.</p>
+      </article>
+      <article>
+        <span class="when">Training</span>
+        <h3>Full-Stack Trainee · <span class="org">Coderz</span></h3>
+        <p>ASP.NET Core and React in a full-stack team environment.</p>
+      </article>
+      <article>
+        <span class="when">2021 – 2022</span>
+        <h3>Game Developer · <span class="org">Makan Entertainment</span></h3>
+        <p>Built a 3D mall simulator in Unity with C# and worked on gameplay mechanics and balance for a MOBA title in an Agile team.</p>
+      </article>
+      <article>
+        <span class="when">2021 – 2025</span>
+        <h3>BSc Computer Science · <span class="org">Al-Balqa Applied University</span></h3>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div>
+      <h2>Hiring a junior .NET developer?</h2>
+      <p>I'm open to on-site and hybrid roles in Amman, and to remote roles. My CV is available on request.</p>
+    </div>
+    <div class="rows">
+      <div class="row"><span>Email</span><b id="email">mousaraed101@gmail.com</b><button class="copy" data-copy="email" type="button">Copy</button></div>
+      <div class="row"><span>Phone</span><b id="phone">+962 79 805 5272</b><button class="copy" data-copy="phone" type="button">Copy</button></div>
+      <div class="row"><span>WhatsApp</span><a href="https://wa.me/962798055272" target="_blank" rel="noopener">Message ↗</a></div>
+      <div class="row"><span>LinkedIn</span><a href="https://www.linkedin.com/in/mousa-raed-17747b349/" target="_blank" rel="noopener">mousa-raed ↗</a></div>
+      <div class="row"><span>GitHub</span><a href="https://github.com/Mousa101" target="_blank" rel="noopener">Mousa101 ↗</a></div>
+    </div>
+  </section>
+  <footer>Amman, Jordan (GMT+3) · Arabic &amp; English</footer>
+</div>
+
+<script>
+(function(){
+  const resp=document.querySelector(".resp"),typed=document.getElementById("typed"),
+        full=typed.textContent,reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let timers=[];
+  function clear(){timers.forEach(clearTimeout);timers=[]}
+  function play(){
+    if(reduce)return;
+    clear();
+    resp.classList.remove("run","loading");resp.classList.add("typing");
+    typed.textContent="";
+    let i=0;
+    (function tick(){
+      typed.textContent=full.slice(0,++i);
+      if(i<full.length)timers.push(setTimeout(tick,28+Math.random()*30));
+      else timers.push(setTimeout(()=>{
+        resp.classList.replace("typing","loading");
+        timers.push(setTimeout(()=>{resp.classList.remove("loading");void resp.offsetWidth;resp.classList.add("run")},650));
+      },250));
+    })();
+  }
+  document.getElementById("replay").addEventListener("click",play);
+  timers.push(setTimeout(play,500));
+})();
+/* sticky bar state + reading progress (all browsers) */
+(function(){
+  const top=document.querySelector(".top");
+  let ticking=false;
+  function update(){
+    const max=document.documentElement.scrollHeight-innerHeight;
+    top.style.setProperty("--sp",max>0?Math.min(1,scrollY/max):0);
+    top.classList.toggle("stuck",scrollY>10);
+    ticking=false;
+  }
+  addEventListener("scroll",()=>{if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
+  update();
+})();
+
+/* highlight the nav link of the section on screen */
+(function(){
+  if(!("IntersectionObserver" in window))return;
+  const links=[...document.querySelectorAll(".nav a")];
+  const io=new IntersectionObserver(es=>{
+    es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))});
+  },{rootMargin:"-45% 0px -50% 0px"});
+  links.forEach(a=>{const s=document.querySelector(a.getAttribute("href"));if(s)io.observe(s)});
+})();
+
+/* numbers count up the first time they scroll into view (final values are in the HTML) */
+(function(){
+  if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  const io=new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(!e.isIntersecting)return;
+      io.unobserve(e.target);
+      const el=e.target,end=+el.dataset.end,t0=performance.now(),dur=1200;
+      (function step(t){
+        const p=Math.min(1,(t-t0)/dur),v=Math.round(end*(1-Math.pow(1-p,3)));
+        el.textContent=v.toLocaleString("en-US");
+        if(p<1)requestAnimationFrame(step);
+      })(t0);
+    });
+  },{threshold:.6});
+  document.querySelectorAll(".facts b").forEach(b=>{
+    const n=+b.textContent.replace(/,/g,"");
+    if(!isNaN(n)&&n>0){b.dataset.end=n;io.observe(b)}
+  });
+})();
+
+document.querySelectorAll(".copy").forEach(b=>{
+  b.addEventListener("click",()=>{
+    const el=document.getElementById(b.dataset.copy);
+    const done=()=>{b.textContent="Copied";setTimeout(()=>b.textContent="Copy",1500)};
+    const select=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected"};
+    try{navigator.clipboard.writeText(el.textContent).then(done,select)}catch(e){select()}
+  });
+});
+</script>
+
+</body>
+</html>
